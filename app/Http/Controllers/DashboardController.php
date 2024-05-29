@@ -10,4 +10,8 @@ class DashboardController extends Controller
     public function index(){
         return Inertia::render('Dashboard/Index',[]);
     }
+
+    public function verify(Request $request){
+        dd($request->get('phone'));
+    }
 }
