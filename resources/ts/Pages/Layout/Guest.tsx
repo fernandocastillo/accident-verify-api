@@ -9,7 +9,7 @@ export default ({ children } : {children:any}) => {
 
     return (
         <>
-        <Head title={companyName  + ' :: Neny'} />
+        <Head title="Accident verification code" />
 
         <div className='min-h-100vh flex grow bg-slate-50 dark:bg-navy-900'>        
             <main className="grid w-full grow grid-cols-1 md:place-items-center">
