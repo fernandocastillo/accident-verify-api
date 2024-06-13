@@ -37,6 +37,12 @@ export default (props: Props)=>{
         post('/')
     }
 
+    function go(){
+        //alert('ok')
+        //parent.loadAnalyticsIframe('');
+        parent.postMessage("finish-otp", "*");
+    }
+
     const [generalError, setGeneralError] = useState(false)
 
     useEffect(()=>{
@@ -112,6 +118,11 @@ export default (props: Props)=>{
                 </svg>              
             ) : null}
         </button>        
+
+        <button
+            type="button" 
+            onClick={go}
+            className={`btn mt-5 w-full ${processing ? 'bg-primary/50' : 'bg-primary' } font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90`}>Go</button>
         
         </div>
         </form>
